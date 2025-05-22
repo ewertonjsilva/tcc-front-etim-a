@@ -1,42 +1,91 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Referencia para fonte utilizada */
+  --font-primary: "Geist", "Geist Fallback";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Paleta de cores */
+  /* Roxo escuro - base da identidade */
+  --color-primary: #B71C1C;
+  /* Versão mais clara - hover, destaques */
+  --color-primary-light: #F05545;
+  /* Destaques secundários, badges e ações importantes */
+  --color-secondary: #FFC107;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  /* Cor de fundo */
+  --color-background: #F5F5F5;
+  /* Fundo para elementos de cartão e containers */
+  --color-surface: #ffffff;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Tipografia */
+  /* Texto padrão escuro */
+  --color-text: #212121;
+  /* Texto secundário e legendas */
+  --color-text-muted: #757575;
+  /* Texto claro para fundos escuros como o primário */
+  --color-text-inverse: #FFFFFF;
+
+  /* Bordas e detalhes */
+  /* Bordas sutis */
+  --color-border: #E0E0E0;
+  /* Sombras leves */
+  --color-shadow: rgba(0, 0, 0, 0.15);
+
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+
+  --padding: 1rem;
+
+  /* Controla a síntese de fontes (negrito, itálico) pelo navegador */
+  font-synthesis: none;
+  /* Otimiza a renderização do texto para melhor legibilidade */
+  text-rendering: optimizeLegibility;
+  /* Melhora a renderização de fontes em navegadores baseados em WebKit (Chrome, Safari) */
   -webkit-font-smoothing: antialiased;
+  /* Melhora a renderização de fontes em navegadores Firefox no macOS */
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  /* Adiciona um efeito de rolagem suave quando links internos são clicados */
+  scroll-behavior: smooth;
+  /* Define o tamanho da fonte base como 10px (para facilitar o uso de rem) */
+  font-size: 62.5%;
+  /* Garante que o elemento html não seja maior que a largura da viewport */
+  max-width: 100vw;
+}
+
+body {
+  /* Define a fonte primária usando uma variável CSS */
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 1.6rem;
+
+  /* Garante uma largura mínima de 320px para evitar layouts quebrados em telas pequenas */
+  min-width: 32rem;
+  min-height: 100vh;
+
+  /* Adiciona um preenchimento ao redor do conteúdo do body usando uma variável CSS */
+  padding: var(--padding);
+
+  /* Força a exibição da barra de rolagem vertical, evitando o deslocamento de elementos quando o conteúdo se torna longo o suficiente para precisar da barra */
+  overflow-y: scroll;
+
+  max-width: 144rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
 * {
+  /* Altera o modelo de caixa para incluir padding e border na largura e altura de um elemento */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1 {
+  color: var(--color-primary);
+  font-size: 3.2rem; 
+  margin-bottom: 1rem;
 }
