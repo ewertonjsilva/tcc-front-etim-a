@@ -40,14 +40,14 @@ function Header() {
           >Produtos</Link>
 
           <Link
-            href='/usuarios/cadastro'
-            className={rota === '/usuarios/cadastro' ? styles.active : ''}
-          >Cadastrar</Link>
-
-          <Link
             href='/sobre'
             className={rota === '/sobre' ? styles.active : ''}
           >Sobre</Link>
+          
+          <Link
+            href='/usuarios/cadastro'
+            className={rota === '/usuarios/cadastro' ? styles.active : ''}
+          >Cadastrar</Link>
 
           <Link
             href='/usuarios/login'

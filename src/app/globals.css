@@ -84,22 +84,34 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
-  color: var(--color-primary);
-  font-size: 3.2rem; 
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  margin: 1rem;
 }
 
-.textoAlternativo {
-  color: #757575;
-  text-align: justify; 
-  line-height: 3rem;
+h2 {
+  font-size: 2.8rem;
+  margin: 0.6rem;
 }
 
-.container {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  /* justify-content: center; 
-  height: 100vh; */
+h3 {
+  font-size: 1.6rem;
+  margin: 0.3rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 37.2%;
+  }
 }
