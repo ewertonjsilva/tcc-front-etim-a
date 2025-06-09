@@ -1,4 +1,17 @@
+.tipos {
+    color: #FAFAFA;
+    background-color: #B71C1C;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 144rem;
+    border-radius: 2rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
 
-.img {
-    margin: 5rem 0;
+.tipos .tpicon {
+    font-size: 4rem;
+    margin: 2rem 6rem;
+    cursor: pointer;
 }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import styles from './index.module.css';
 
-export default function Rodape() {
+export default function Footer() {
     return (
         <footer className={styles.rodape}>
             <div className={styles.social}>
