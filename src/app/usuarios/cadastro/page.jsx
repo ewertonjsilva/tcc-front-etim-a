@@ -36,7 +36,8 @@ export default function CadastroUsuario() {
         uf: '0',
         confSenha: '',
     });
-
+    console.log(usuario);
+    
     const valDefault = styles.formControl;
     const valSucesso = styles.formControl + ' ' + styles.success;
     const valErro = styles.formControl + ' ' + styles.error;
@@ -479,24 +480,24 @@ export default function CadastroUsuario() {
         // salvar quando atingir o número de itens a serem validados
         // alert(itensValidados);
         if (itensValidados === 13) {
-            // alert('chama api');            
-
-            try {
-                let confirmaCad;
-                const response = await api.post('/clientes', usuario);
-                confirmaCad = response.data.sucesso;
-                // const idUsu = confirmaCad;
-                // alert(idUsu);
-                if (confirmaCad) {
-                    router.push('/')
-                }
-            } catch (error) {
-                if (error.response) {
-                    alert(error.response.data.mensagem + '\n' + error.response.data.dados);
-                } else {
-                    alert('Erro no front-end' + '\n' + error);
-                }
-            }
+            alert('chama api');                        
+            router.push('/usuarios/login');
+            // try {
+            //     let confirmaCad;
+            //     const response = await api.post('/clientes', usuario);
+            //     confirmaCad = response.data.sucesso;
+            //     // const idUsu = confirmaCad;
+            //     // alert(idUsu);
+            //     if (confirmaCad) {
+            //         router.push('/')
+            //     }
+            // } catch (error) {
+            //     if (error.response) {
+            //         alert(error.response.data.mensagem + '\n' + error.response.data.dados);
+            //     } else {
+            //         alert('Erro no front-end' + '\n' + error);
+            //     }
+            // }
         }
     }
 

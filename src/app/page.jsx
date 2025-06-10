@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import Slider from "@/componentes/slider"; 
 import ProdutosHome from "@/componentes/produtosHome";
 
